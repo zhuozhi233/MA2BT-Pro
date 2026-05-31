@@ -1,19 +1,19 @@
 
-# MA2BT
+# MA2BT Pro
 
 ## [简体中文](README.md) | [English](README_EN.md) | [日本語](README_JP.md)
 
 > 用于 **VRChat Avatar** 的 **Modular Avatar** 转 **BlendTree** 优化器  
 > 遇到问题可以在官方 QQ 群 **1047423396** 中反馈
 
-MA2BT 会在 Modular Avatar 构建流程结束后运行，将符合条件的 Animator 层合并为一个 Direct BlendTree，从而减少 FX 层数量并提升 Avatar 性能。
+MA2BT Pro 会在 Modular Avatar 构建流程结束后运行，将符合条件的 Animator 层合并为一个 Direct BlendTree，从而减少 FX 层数量并提升 Avatar 性能。
 
 Booth：https://puddingkc.booth.pm/items/8309096
 
 ## 工作原理
 
 Modular Avatar 会为每一个响应式属性（Object Toggle、Material Setter、Shape Changer 等）生成一个独立的 Animator 层，这些层在运行时会带来额外开销。  
-MA2BT 会在构建完成后分析这些生成的层，并将其中简单的结构转换为一个共享层中的 BlendTree 节点。
+MA2BT Pro 会在构建完成后分析这些生成的层，并将其中简单的结构转换为一个共享层中的 BlendTree 节点。
 
 ```
 优化前:
@@ -41,14 +41,14 @@ MA_To_BlendTree_Layer    (1 Layer, 1 Direct BlendTree)
 
 ## 安装方法
 
-- VCC: `https://null-k.github.io/vpm-listing/index`
+- VCC: `https://zhuozhi233.github.io/vpm-listing/index.json`
 
 ## 使用方法
 
 1. 选中你的 Avatar 根节点 **（Avatar root）**
-2. 添加组件: **Add Component > MA2BT > MA2BT**
-3. 正常构建 Avatar，MA2BT 会在优化阶段自动运行
-4. 在 Console 中查看 `[MA2BT]` 日志了解转换结果
+2. 添加组件: **Add Component > MA2BT Pro > MA2BT Pro**
+3. 正常构建 Avatar，MA2BT Pro 会在优化阶段自动运行
+4. 在 Console 中查看 `[MA2BT Pro]` 日志了解转换结果
 
 > ※ 如果你安装了 AAO 或其他会合并动画层的插件，生成的 MA_To_BlendTree_Layer 层会被这些插件进一步合并。可以先移除其他优化插件来测试合并的数量和效果。
 
@@ -80,3 +80,7 @@ MA_To_BlendTree_Layer    (1 Layer, 1 Direct BlendTree)
 ## 鸣谢
 
 [丨丿・丶乛](https://space.bilibili.com/299071021) - 视频提供了灵感。本插件最初基于 `浊鸷` 的插件进行修改，随后在保留部分命名的基础上对整体逻辑进行了重构。
+
+MA2BT Pro 基于 Null-K/MA2BT 修改和扩展，感谢原项目作者 PuddingKC / Null-K。
+
+原项目采用 Unlicense 许可证发布。

@@ -1,21 +1,24 @@
 {
-    "name": "com.puddingkc.ma2bt",
-    "version": "2.0.2",
-    "displayName": "MA2BT",
-    "description": "Convert Modular Avatar responsive components into BlendTrees",
-    "unity": "2019.4",
-    "author": {
-        "name": "PuddingKC",
-        "url": "https://github.com/Null-K"
-    },
-    "vpmDependencies": {
-        "nadena.dev.ndmf": ">=1.4.0",
-        "nadena.dev.modular-avatar": ">=1.10.0"
-    },
-    "keywords": [
-        "modular-avatar",
-        "vrchat",
-        "optimization",
-        "avatar"
-    ]
+  "name": "com.zhuozhi.ma2bt-pro",
+  "version": "1.2.9",
+  "displayName": "MA2BT Pro",
+  "description": "Optimize Modular Avatar responsive component generated animator layers by converting supported layers into BlendTrees.",
+  "unity": "2022.3",
+  "author": {
+    "name": "浊鸷",
+    "url": "https://github.com/zhuozhi233/MA2BT-Pro"
+  },
+  "license": "Unlicense",
+  "vpmDependencies": {
+    "nadena.dev.ndmf": ">=1.9.0",
+    "nadena.dev.modular-avatar": ">=1.10.0"
+  },
+  "keywords": [
+    "modular-avatar",
+    "vrchat",
+    "optimization",
+    "avatar",
+    "blendtree",
+    "ma2bt-pro"
+  ]
 }
