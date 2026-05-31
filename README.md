@@ -37,7 +37,7 @@ MA_To_BlendTree_Layer    (1 Layer, 1 Direct BlendTree)
 
 ## 安装方法
 
-- VCC: `https://zhuozhi233.github.io/vpm-listing/index.json`
+- VCC: `https://zhuozhi233.github.io/vpm-listing/index`
 
 ## 使用方法
 
