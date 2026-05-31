@@ -1,14 +1,10 @@
 
 # MA2BT Pro
 
-## [简体中文](README.md) | [English](README_EN.md) | [日本語](README_JP.md)
-
 > 用于 **VRChat Avatar** 的 **Modular Avatar** 转 **BlendTree** 优化器  
-> 遇到问题可以在官方 QQ 群 **1047423396** 中反馈
+> 遇到问题可以在官方 QQ 群 **798072555** 中反馈
 
 MA2BT Pro 会在 Modular Avatar 构建流程结束后运行，将符合条件的 Animator 层合并为一个 Direct BlendTree，从而减少 FX 层数量并提升 Avatar 性能。
-
-Booth：https://puddingkc.booth.pm/items/8309096
 
 ## 工作原理
 
@@ -30,7 +26,7 @@ MA_To_BlendTree_Layer    (1 Layer, 1 Direct BlendTree)
   └── shoes_param   → 1D BlendTree
 ```
 
-无法安全转换的层（例如多参数 AND 条件、非瞬时过渡等）将保持不变。
+无法安全转换的层将保持不变。
 
 ## 依赖要求
 
