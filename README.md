@@ -2,6 +2,7 @@
 # MA2BT Pro
 
 > 用于 **VRChat Avatar** 的 **MA Responsive 图层转 BlendTree** 优化器
+
 > 遇到问题可以在官方 QQ 群 **798072555** 中反馈
 
 MA2BT Pro 会在 Avatar 构建时自动运行，把可转换的 MA Responsive 图层合并到一个 BlendTree 图层中，以减少 Animator Layer 数量，降低动画控制器开销。
