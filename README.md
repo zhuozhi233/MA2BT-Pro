@@ -156,7 +156,7 @@ MA2BT Pro 只会转换可以安全合并到 BlendTree 的图层。
 
 ## 鸣谢
 
-MA2BT Pro 基于 Null-K/MA2BT 修改和扩展，感谢原项目作者 PuddingKC / Null-K。
+MA2BT Pro 基于 [Null-K/MA2BT](https://github.com/Null-K/MA2BT) 修改和扩展，感谢原项目作者 [PuddingKC / Null-K](https://github.com/Null-K) 。
 
 ## License
 
