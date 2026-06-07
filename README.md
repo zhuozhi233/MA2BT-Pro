@@ -70,7 +70,7 @@ MA_To_BlendTree_Layer
 
 ### VCC / VPM 安装
 
-在 VCC 中[添加](vcc://vpm/addRepo?url=https://zhuozhi233.github.io/vpm-listing/index.json)以下仓库地址：
+在 VCC 中 [添加](vcc://vpm/addRepo?url=https://zhuozhi233.github.io/vpm-listing/index.json) 以下仓库地址：
 
 ```text
 https://zhuozhi233.github.io/vpm-listing/index.json
