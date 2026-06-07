@@ -2,7 +2,7 @@
 # MA2BT Pro
 
 > 用于 **VRChat Avatar** 的 **MA Responsive 图层转 BlendTree** 优化器  
-> 遇到问题可以在官方 QQ 群 **798072555** 中反馈
+> 遇到问题可以在官方 QQ 群 **[798072555](https://qm.qq.com/q/twRdtPK9xY)** 中反馈
 
 MA2BT Pro 会在 Avatar 构建时自动运行，把可转换的 MA Responsive 图层合并到一个 BlendTree 图层中，以减少 Animator Layer 数量，降低动画控制器开销。
 
@@ -10,7 +10,7 @@ MA2BT Pro 基于 MA2BT 修改和扩展。
 
 ## 与 MA2BT 的关系
 
-MA2BT Pro 基于 Null-K / MA2BT 修改和扩展。
+MA2BT Pro 基于 [Null-K / MA2BT](https://github.com/Null-K/MA2BT) 修改和扩展。
 
 原版 MA2BT 是一个简洁、轻量的工具，主要用于将 Modular Avatar 生成的响应式图层转换为 BlendTree。
 MA2BT Pro 保留了这个核心思路，并在此基础上增加了一些面向复杂 Avatar 项目的扩展功能和保护逻辑。
@@ -70,7 +70,7 @@ MA_To_BlendTree_Layer
 
 ### VCC / VPM 安装
 
-在 VCC 中添加以下仓库地址：
+在 VCC 中[添加](vcc://vpm/addRepo?url=https://zhuozhi233.github.io/vpm-listing/index.json)以下仓库地址：
 
 ```text
 https://zhuozhi233.github.io/vpm-listing/index.json
