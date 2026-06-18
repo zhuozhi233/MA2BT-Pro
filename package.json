@@ -1,6 +1,6 @@
 {
   "name": "com.zhuozhi.ma2bt-pro",
-  "version": "1.2.9",
+  "version": "1.3.0",
   "displayName": "MA2BT Pro",
   "description": "将 Modular Avatar 响应式组件转换为 BlendTree，减少 Animator Layer 数量，优化 Avatar 性能。",
   "unity": "2022.3",

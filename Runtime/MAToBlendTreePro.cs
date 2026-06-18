@@ -47,6 +47,13 @@ namespace zhuozhi.MA2BTPro
         {
         };
 
+        [Tooltip("MA 响应式图层的名称前缀匹配列表。图层名以列表中任意前缀开头时，会被识别为 MA 生成的响应式图层进行转换。可以在这里添加、删除或修改前缀。")]
+        public List<string> maResponsivePrefixes = new List<string>
+        {
+            "MA Responsive: ",
+            "RC MA Responsive: "
+        };
+
 #if UNITY_EDITOR
         public static bool IsNDMFCompatible(out string message)
         {
@@ -116,7 +123,7 @@ namespace zhuozhi.MA2BTPro
         static readonly Color VersionTextColor = new Color(0.42f, 0.22f, 0.58f);
         static readonly Color UpdateTextColor = new Color(0.72f, 0.28f, 0.95f);
 
-        const string VERSION = "1.2.9";
+        const string VERSION = "1.3.0";
         const string BILI_VIDEO_URL = "https://www.bilibili.com/video/BV1xHGp66ENJ";
         const string BILI_API = "https://api.bilibili.com/x/web-interface/view?bvid=BV1xHGp66ENJ";
 
@@ -199,6 +206,11 @@ namespace zhuozhi.MA2BTPro
             DrawToggle("convertMultiState", "多状态图层", "转换包含多个条件状态的图层。关闭时会保留多状态图层。");
             DrawToggle("mergeIdenticalBlendTreesAndAnimations", "合并相同混合树 / 动画", "当多个图层的多状态参数结构完全一致时，合并成一个嵌套混合树，并把相同状态的动画曲线合并到同一个动画里。关闭后会按图层分别生成嵌套树，便于排查转换问题。");
             DrawToggle("scanAllLayers", "扫描所有图层（不建议开启）", "扫描所有 FX 图层，而不仅仅是 MA 生成的图层。外部图层可能包含复杂 BlendTree、特殊条件或行为语义，开启后有更高概率出现转换不等价。");
+
+            EditorGUILayout.Space(8);
+
+            EditorGUILayout.LabelField("响应式前缀", EditorStyles.boldLabel);
+            DrawPrefixList("maResponsivePrefixes", "MA 响应式前缀", "MA 响应式图层的名称前缀匹配列表。图层名以列表中任意前缀开头时，会被识别为 MA 生成的响应式图层进行转换。可以在这里添加、删除或修改前缀。");
 
             EditorGUILayout.Space(8);
 

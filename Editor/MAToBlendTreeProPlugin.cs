@@ -131,7 +131,6 @@ internal class LayerToBlendTreeOptimizer
 {
     const string ROOT_PARAM = "zhz/1";
     const string BLEND_TREE_LAYER_NAME = "MA_To_BlendTree_Layer";
-    const string MA_RESPONSIVE_PREFIX = "MA Responsive: ";
 
     readonly MAToBlendTreePro _settings;
     readonly VirtualAnimatorController _fx;
@@ -267,6 +266,20 @@ internal class LayerToBlendTreeOptimizer
 
     #region 扫描
 
+    bool IsMAResponsiveLayer(string layerName)
+    {
+        if (string.IsNullOrEmpty(layerName) || _settings.maResponsivePrefixes == null)
+            return false;
+
+        foreach (var prefix in _settings.maResponsivePrefixes)
+        {
+            if (!string.IsNullOrEmpty(prefix) && layerName.StartsWith(prefix))
+                return true;
+        }
+
+        return false;
+    }
+
     List<AnalyzedLayer> AnalyzeAllLayers()
     {
         var results = new List<AnalyzedLayer>();
@@ -274,7 +287,7 @@ internal class LayerToBlendTreeOptimizer
 
         foreach (var layer in _fx.Layers)
         {
-            bool isMALayer = layer.Name != null && layer.Name.StartsWith(MA_RESPONSIVE_PREFIX);
+            bool isMALayer = IsMAResponsiveLayer(layer.Name);
             bool shouldAnalyze = isMALayer || _settings.scanAllLayers;
 
             if (shouldAnalyze && layer.Name != BLEND_TREE_LAYER_NAME)
